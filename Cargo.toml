@@ -1,0 +1,11 @@
+[package]
+name = "grt"
+version = "0.1.0"
+edition = "2024"
+description = "Goroutine-flavored ergonomics as a thin facade over tokio: go!, go_blocking!, channels, sleep. Borrows the ambient runtime; falls back to one immortal global runtime."
+
+[dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "sync", "time", "macros"] }
+
+[lints.rust]
+unsafe_code = "forbid"
